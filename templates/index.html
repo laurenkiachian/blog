@@ -29,14 +29,6 @@
   background-color: #04AA6D;
   color: white;
 }
-</style>
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<style>
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
@@ -71,6 +63,7 @@ body {
   overflow: hidden;
 }
 .dropdown .dropbtn {
+  text-align: center;
   font-size: 16px;  
   border: none;
   outline: none;
@@ -83,8 +76,10 @@ body {
 }
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: red;
+  text-align: center;
 }
 .dropdown-content {
+  text-align: center;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -109,16 +104,17 @@ body {
 </style>
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body style="background-color:white;">
 
 <div style="text-align:center">
     <div class="navbar">
     <a href="#home">Home</a>
-    <div class="dropdown" style="text-align:center">
-        <button class="dropbtn" href="#news">Posts 
-        <i class="fa fa-caret-down"></i>
-        </button>
+    <div class="dropdown">
+        <button class="dropbtn" href="#posts">Posts<i class="fa fa-caret-down"></i></button>
         <div class="dropdown-content">
         <a href="#">post1</a>
         <a href="#">post2</a>
