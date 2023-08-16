@@ -127,6 +127,7 @@ h1 {
   display: table;
   clear: both;
 }
+.mySlides {display:none;}
 </style>
 
 
@@ -153,15 +154,48 @@ h1 {
 
 <body>
     <header>
-        <h1>Welcome to Inside My Brain</h1>
+        <h1>Welcome</h1>
     </header>
+    <h2 class="w3-center">Manual Slideshow</h2>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <div class="w3-content w3-display-container">
+      <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flucidmotors.com%2F&psig=AOvVaw0wg-5PpH0DrjZFXu-4a6QQ&ust=1692305880861000&source=images&cd=vfe&opi=89978449&ved=0CA0QjRxqFwoTCODJzumI4oADFQAAAAAdAAAAABAD" style="width:100%">
+      <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flucidmotors.com%2F&psig=AOvVaw0wg-5PpH0DrjZFXu-4a6QQ&ust=1692305880861000&source=images&cd=vfe&opi=89978449&ved=0CA0QjRxqFwoTCODJzumI4oADFQAAAAAdAAAAABAD" style="width:100%">
+      <img class="mySlides" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flucidmotors.com%2F&psig=AOvVaw0wg-5PpH0DrjZFXu-4a6QQ&ust=1692305880861000&source=images&cd=vfe&opi=89978449&ved=0CA0QjRxqFwoTCODJzumI4oADFQAAAAAdAAAAABAD" style="width:100%">
+
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script> 
     <main>
         <article>
-            <h2>Blog Post Title</h2>
+            <h2>Post Title</h2>
             <p>This is the content of the blog post.</p>
         </article>
     </main>
   
+    <hr class="title_break slider">
+
     <div class="row">
       <div class="column" style="background-color:#aaa;">
         <h2>Column 1</h2>
